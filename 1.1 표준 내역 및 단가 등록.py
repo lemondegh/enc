@@ -27,7 +27,7 @@ tab1, tab2 = st.tabs(['표준내역 이력', '표준단가 이력'])
 with tab1:
     # st.image('./images/표준내역 이력.png')
     file = os.path.join(DATA_FOLDER, '표준내역 이력.xlsx')
-    df = pd.read_excel(file)
+    df = pd.read_excel('./data/표준내역 이력.xlsx')
     df = df.fillna(" ")
     df['선택'] = False
     print(df)
