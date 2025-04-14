@@ -41,10 +41,10 @@ with tab1:
     df = df[columns]  # 새로운 순서로 DataFrame 재구성
 
     
-    col1, col2, col3 = st.columns([2, 7, 2])
+    col1, col2, col3 = st.columns([3, 7, 3])
     with col1:
         st.button('표준내역 업로드')
-    with col2:
+    with col3:
         st.download_button(
             label="표준내역 다운로드",
              data=csv,
@@ -73,10 +73,10 @@ with tab2:
     df = df[columns]  # 새로운 순서로 DataFrame 재구성
 
     
-    col1, col2, col3 = st.columns([2, 7, 2])
+    col1, col2, col3 = st.columns([3, 7, 3])
     with col1:
-        st.button('표준단가 업로드', type="primary")
-    with col2:
+        st.button('표준단가 업로드')
+    with col3:
         st.download_button(
             label="표준단가 다운로드",
              data=csv,
