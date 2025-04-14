@@ -43,7 +43,7 @@ with tab1:
     
     col1, col2, col3 = st.columns([2, 7, 2])
     with col1:
-        st.button('표준내역 업로드', type="primary")
+        st.button('표준내역 업로드')
     with col2:
         st.download_button(
             label="표준내역 다운로드",
