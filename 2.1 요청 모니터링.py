@@ -4,9 +4,13 @@ import pandas as pd
 import os
 import time
 
-st.subheader('요청 모니터링')
+st.subheader('요청 모니터링', divider=True)
+st.markdown(
+    ":blue-badge[:material/star: ] :gray-badge[표준 매핑 요청 후 진행상황 확인을 위한 모니터링 화면]"
+)
 
-# st.image('./images/요청 모니터링.png')
+# with st.spinner('매핑요청 목록을 조회 중입니다.'):
+#     time.sleep(1.5)
     
 file = os.path.join(DATA_FOLDER, '요청 모니터링.xlsx')
 df = pd.read_excel(file)
@@ -38,14 +42,18 @@ with col2:
     st.markdown(document, unsafe_allow_html=True)
 
 with st.expander('조회 목록', expanded=exp):
-    st.data_editor(df, height=800, use_container_width=True, hide_index=True)
+    st.data_editor(df, height=600, use_container_width=True, hide_index=True)
 
 if req:
-    with st.spinner("내역 매핑이 진행중입니다...", show_time=True):
+    with st.spinner("SmartTA에 내역 매핑을 요청하고 있습니다...", show_time=True):
         time.sleep(5)
 
-        file = os.path.join(DATA_FOLDER, '요청 모니터링_RES.xlsx')
-        df = pd.read_excel(file)
-        df = df.fillna(" ")
+        # file = os.path.join(DATA_FOLDER, '요청 모니터링_RES.xlsx')
+        # df = pd.read_excel(file)
+        # df = df.fillna(" ")
 
-        st.data_editor(df, height=800, use_container_width=True, hide_index=True)
+        # st.data_editor(df, height=800, use_container_width=True, hide_index=True)
+        
+        st.info(
+            ":blue-badge[:material/star: ] :gray-badge[예산내역역결과 조회를 통해 확인할 수 있습니다.]"
+        )

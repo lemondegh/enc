@@ -1,6 +1,11 @@
 import streamlit as st
 
 st.set_page_config(layout="wide")
+
+st.sidebar.markdown('''
+    :ballot_box_with_check: **표준내역 매핑 시스템**
+''')
+
 pages = {
     "1. 표준 관리": [
         st.Page("1.1 표준 내역 및 단가 등록.py", title="표준 내역 및 단가 등록"),
