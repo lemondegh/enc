@@ -55,5 +55,5 @@ if req:
         # st.data_editor(df, height=800, use_container_width=True, hide_index=True)
         
         st.info(
-            ":blue-badge[:material/star: ] :gray-badge[예산내역역결과 조회를 통해 확인할 수 있습니다.]"
+            ":blue-badge[:material/star: ] :gray-badge[예산내역결과 조회를 통해 확인할 수 있습니다.]"
         )
