@@ -7,7 +7,7 @@ import time
 
 st.subheader('내역별 표준단가 산출', divider=True)
 st.markdown(
-    ":blue-badge[:material/star: ] :gray-badge[외주계약 단가를 근거로 당분기 표준단가를 산출하는 화면]"
+    ":blue-badge[:material/star: ] :gray-badge[외주계약 단가를 근거로 당분기 표준단가를 산출하는 화면(외주계약에서 조회되는 단가 활용)]"
 )
 
 tab1, tab2 = st.tabs(['외주 계약 조회', '표준단가 산출'])

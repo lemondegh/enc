@@ -34,11 +34,19 @@ def show_dialog_items():
     df = df.fillna(" ")
 
     st.data_editor(df, hide_index=True, height=400, width=100,use_container_width=True)
-    selected = st.button('업로드')
+    col1, col2, col3 = st.columns([2, 7, 2])
+    with col1:
+        selected = st.button('업로드')
+    with col3:
+        cancel = st.button('취소')
+    with col2:
+        pass 
 
     if selected:
         with st.spinner('표준내역을 업로드 중입니다.'):
             time.sleep(2)
+        st.rerun()
+    if cancel:
         st.rerun()
 
 @st.dialog("표준단가 업로드", width='large')
@@ -48,12 +56,21 @@ def show_dialog_unit_price():
     df = df.fillna(" ")
 
     st.data_editor(df, hide_index=True, height=400, width=100,use_container_width=True)
-    selected = st.button('업로드')
+    col1, col2, col3 = st.columns([2, 7, 2])
+    with col1:
+        selected = st.button('업로드')
+    with col3:
+        cancel = st.button('취소')
+    with col2:
+        pass 
 
     if selected:
         with st.spinner('표준단가를 업로드 중입니다.'):
             time.sleep(2)
         st.rerun()
+    if cancel:
+        st.rerun()
+
 tab1, tab2 = st.tabs(['표준내역 이력', '표준단가 이력'])
 
 with tab1:
@@ -90,8 +107,9 @@ with tab1:
             file_name="표준내역.xlsx",
             mime="application/vnd.ms-excel",
             icon=":material/download:",
+            help='목록에서 대상 선택 후 다운로드하세요.'
         )
-    with col3:
+    with col2:
         pass
 
     st.data_editor(df, height=400, use_container_width=True, hide_index=True)
@@ -134,8 +152,9 @@ with tab2:
             file_name="표준단가.xlsx",
             mime="application/vnd.ms-excel",
             icon=":material/download:",
+            help='목록에서 대상 선택 후 다운로드하세요.'
         )
-    with col3:
+    with col2:
         pass
 
     st.data_editor(df, height=400, use_container_width=True, hide_index=True)
