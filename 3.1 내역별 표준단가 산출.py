@@ -50,18 +50,18 @@ with tab2:
     df = df.fillna(" ")
 
     df['단가(표준)'] = np.floor(df['단가(표준)']).astype(int)
-    df['대비(표준)'] = np.floor(df['대비(표준)']).astype(int)
+    df['대비(표준,%)'] = np.floor(df['대비(표준,%)']).astype(int)
 
-    # df['단가(외주1)'] = np.floor(df['단가(외주1)']).astype(int)
-    df['대비(외주1)'] = np.floor(df['대비(외주1)']).astype(int)
-    # df['단가(외주2)'] = np.floor(df['단가(외주2)']).astype(int)
-    df['대비(외주2)'] = np.floor(df['대비(외주2)']).astype(int)
-    # df['단가(외주3)'] = np.floor(df['단가(외주3)']).astype(int)
-    df['대비(외주3)'] = np.floor(df['대비(외주3)']).astype(int)
-    # df['단가(외주4)'] = np.floor(df['단가(외주4)']).astype(int)
-    df['대비(외주4)'] = np.floor(df['대비(외주4)']).astype(int)
-    # df['단가(외주5)'] = np.floor(df['단가(외주5)']).astype(int)
-    df['대비(외주5)'] = np.floor(df['대비(외주5)']).astype(int)
+    # # df['단가(외주1)'] = np.floor(df['단가(외주1)']).astype(int)
+    # df['대비(외주1)'] = np.floor(df['대비(외주1)']).astype(int)
+    # # df['단가(외주2)'] = np.floor(df['단가(외주2)']).astype(int)
+    # df['대비(외주2)'] = np.floor(df['대비(외주2)']).astype(int)
+    # # df['단가(외주3)'] = np.floor(df['단가(외주3)']).astype(int)
+    # df['대비(외주3)'] = np.floor(df['대비(외주3)']).astype(int)
+    # # df['단가(외주4)'] = np.floor(df['단가(외주4)']).astype(int)
+    # df['대비(외주4)'] = np.floor(df['대비(외주4)']).astype(int)
+    # # df['단가(외주5)'] = np.floor(df['단가(외주5)']).astype(int)
+    # df['대비(외주5)'] = np.floor(df['대비(외주5)']).astype(int)
 
 
     # with st.expander('표준단가 산출', expanded=True):

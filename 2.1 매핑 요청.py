@@ -46,7 +46,7 @@ with st.expander('조회 목록', expanded=exp):
 
 if req:
     with st.spinner("SmartTA에 내역 매핑을 요청하고 있습니다...", show_time=True):
-        st.image('./images/nginx.jpg')
+        st.image('./images/nginx.jpg', use_column_width=True)
         time.sleep(5)
 
         # file = os.path.join(DATA_FOLDER, '요청 모니터링_RES.xlsx')
