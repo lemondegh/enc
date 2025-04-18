@@ -41,8 +41,10 @@ with col2:
     '''
     st.markdown(document, unsafe_allow_html=True)
 
-with st.expander('조회 목록', expanded=exp):
+msg = '조회 목록 ~ 진행상태 : 요청 ▶ 진행대기 ▶ 진행중 ▶ 완료 '
+with st.expander(msg, expanded=exp):
     st.data_editor(df, height=600, use_container_width=True, hide_index=True)
+
 
 if req:
     with st.spinner("SmartTA에 내역 매핑을 요청하고 있습니다...", show_time=True):
