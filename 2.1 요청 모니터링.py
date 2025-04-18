@@ -4,7 +4,7 @@ import pandas as pd
 import os
 import time
 
-st.subheader('매핑 요청청', divider=True)
+st.subheader('매핑 요청', divider=True)
 st.markdown(
     ":blue-badge[:material/star: ] :gray-badge[표준 매핑 요청 후 진행상황 확인을 위한 모니터링 화면]"
 )
